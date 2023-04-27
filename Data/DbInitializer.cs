@@ -4,6 +4,8 @@ namespace KRK_Class7_Task1.Data
 {
     public static class DbInitializer
     {
+
+        
         public static void Initialize(MyDbContext context)
         {
             context.Database.EnsureCreated();
@@ -65,6 +67,8 @@ namespace KRK_Class7_Task1.Data
             foreach (Product p in products) { context.Products.Add(p); }
             context.SaveChanges();
 
+            
+
 
             var orderproducts = new OrderProduct[]
             {
@@ -94,6 +98,12 @@ namespace KRK_Class7_Task1.Data
             // na integracje danych.
             // Pytanie: Jak powinno zostać to wykonane, żeby te wartości uzupełniały się same automatycznie?
             // Mój pomysł to dodanie triggera lub procedury w bazie.
+
+            // Można dodać metodę AddOrder, która wyciąga dane z tabeli Product, sumuje je i wstawia za pomocą
+            // osobnego inserta dane do tabeli OrderProduct
+            // biblioteka Faker.Net
+
+            
         }
     }
 }
