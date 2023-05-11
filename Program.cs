@@ -1,9 +1,11 @@
+using KRK_Class7_Task1.Abstracts;
 using KRK_Class7_Task1.Data;
+using KRK_Class7_Task1.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Connecting Database service to this project
+// Dodanie serwisu DbContext do projektu.
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(   // Choosing DB
         builder.Configuration.GetConnectionString("MyConnectString") // Defining connection string to DB
@@ -11,6 +13,9 @@ builder.Services.AddDbContext<MyDbContext>(options =>
     .LogTo(Console.WriteLine)   // DB logs will appear on my project terminal.
     .EnableSensitiveDataLogging()   // More information that will appear on terminal.
 );
+
+// Dodanie utworzonego serwisu IProductService do projektu.
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

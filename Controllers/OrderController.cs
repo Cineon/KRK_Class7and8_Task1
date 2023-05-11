@@ -16,7 +16,7 @@ namespace KRK_Class7_Task1.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _dbContext.Orders.Include(o => o.Client).ToListAsync());
+            return View(await _dbContext.Orders.ToListAsync());
         }
     }
 }
