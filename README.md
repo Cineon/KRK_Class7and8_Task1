@@ -1,6 +1,6 @@
 ## KRK_Class7_Task1
-Projekt æwiczeniowy maj¹cy na celu zapoznaæ z u¿yciem EntityFramework do po³¹czenia z baz¹  
+Projekt Ä‡wiczeniowy majÄ…cy na celu zapoznaÄ‡ z uÅ¼yciem EntityFramework do poÅ‚Ä…czenia z bazÄ…  
 oraz wykorzystaniem serwisu do zasilenia danych dla widoku.  
-W projekcie widoczne s¹ dwa podejœcia przekazania danych z bazy.  
--- dla widoku Order/Index dane z bazy przekazywane s¹ bezpoœrednio do kontrolera.
--- dla widoku Product/Index dane z bazy pochodz¹ z serwisu, który przemapowa³ dane pochodz¹ce z bazy.
+W projekcie widoczne sÄ… dwa podejÅ›cia przekazania danych z bazy.  
+- dla widoku Order/Index dane z bazy przekazywane sÄ… bezpoÅ›rednio do kontrolera.
+- dla widoku Product/Index dane z bazy pochodzÄ… z serwisu, ktÃ³ry przemapowaÅ‚ dane pochodzÄ…ce z bazy.
